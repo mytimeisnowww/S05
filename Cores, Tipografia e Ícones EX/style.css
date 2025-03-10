@@ -1,0 +1,101 @@
+/* style.css */
+:root {
+    /* Cores Institucionais Inatel */
+    --inatel-primary: #004A8D;
+    --inatel-secondary: #FFD100;
+    --inatel-accent: #E6007E;
+    
+    /* Tema Escuro */
+    --dark-bg: #1A1A1A;
+    --dark-card: #2D2D2D;
+    --dark-text: #FFFFFF;
+
+    /* Cores Base */
+    --background: #FFFFFF;
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 16px;
+}
+
+/* === Grid Original Mantido === */
+.container {
+    display: grid;
+    gap: 16px;
+    max-width: 414px;
+    margin: 0 auto;
+}
+
+.header { background-color: var(--card-bg); }
+.disciplinas { background-color: var(--card-bg); }
+.noticias { background-color: var(--card-bg); }
+.mensagens { background-color: var(--card-bg); }
+
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* === Novas Estilizações === */
+.logo {
+    width: 150px;
+    fill: var(--inatel-primary);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* === Temas === */
+body[data-theme="inatel"] {
+    --background: #FFFFFF;
+    --text-color: #333333;
+    --card-bg: #F5F5F5;
+}
+
+body[data-theme="dark"] {
+    --background: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --card-bg: var(--dark-card);
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+    .header, .mensagens { grid-column: 1 / -1; }
+}
