@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+}
+
+.container {
+    display: grid;
+    gap: 16px;
+    max-width: 414px; /* Largura lógica do iPhone 11 */
+    margin: 0 auto;
+}
+
+/* Cores temporárias para visualização */
+.header { background-color: #e3f2fd; }
+.disciplinas { background-color: #f0f4c3; }
+.noticias { background-color: #ffcdd2; }
+.mensagens { background-color: #d1c4e9; }
+
+.card {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Layout responsivo para tablets */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+    
+    .header {
+        grid-column: 1 / -1;
+    }
+    
+    .mensagens {
+        grid-column: 1 / -1;
+    }
+}
