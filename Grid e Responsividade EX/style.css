@@ -21,7 +21,6 @@ body {
 .header { background-color: #e3f2fd; }
 .disciplinas { background-color: #f0f4c3; }
 .noticias { background-color: #ffcdd2; }
-.mensagens { background-color: #d1c4e9; }
 
 .card {
     padding: 16px;
@@ -39,10 +38,6 @@ body {
     }
     
     .header {
-        grid-column: 1 / -1;
-    }
-    
-    .mensagens {
         grid-column: 1 / -1;
     }
 }
