@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-switcher">
-        <button class="theme-btn" onclick="toggleThemeMenu()">
-            <span class="material-symbols-outlined">palette</span>
-        </button>
-        <div class="theme-menu">
-            <button onclick="changeTheme('inatel')">Tema Inatel</button>
-            <button onclick="changeTheme('dark')">Tema Dark</button>
-        </div>
-    </div>
     <div class="container">
+        <!-- Botão de Troca de Tema -->
+        <div class="theme-switcher">
+            <button class="theme-btn" onclick="toggleThemeMenu()">
+                <span class="material-symbols-outlined">palette</span>
+            </button>
+            <div class="theme-menu">
+                <button onclick="changeTheme('inatel')">Tema Inatel</button>
+                <button onclick="changeTheme('dark')">Tema Dark</button>
+            </div>
+        </div>
         <header class="header">
-            <!-- Logo Inatel SVG -->
+            <!-- Logo Inatel -->
             <svg class="logo" viewBox="100 150 390 116">
                 <path d="M127.455,156.988h21.287l-21.859,102.835H105.69L127.455,156.988L127.455,156.988z M225.618,208.048
                 l-10.941,51.775H194.51l9.726-45.911c0.286-1.168,0.477-2.312,0.62-3.456c0.143-1.144,0.214-2.145,0.214-3.027
@@ -52,41 +53,34 @@
                 C434.246,218.322,433.458,222.232,432.339,227.213L432.339,227.213z M414.46,213.912c0.143-1.119,0.262-2.098,0.334-2.955	
                 c0.07-0.858,0.096-1.55,0.096-2.05c0-3.385-0.979-6.031-2.957-7.914s-4.768-2.813-8.344-2.813c-4.146,0-7.676,1.335-10.607,4.005	
                 s-5.172,6.579-6.697,11.728H414.46L414.46,213.912z M461.826,156.988h20.311l-21.932,102.835h-20.262L461.826,156.988	L461.826,156.988z"></path></svg>
-            <h1>Olá Raphael</h1>
-            <ul class="alertas">
-                <li><span class="material-symbols-outlined">inventory_2</span> Armário reservado para entrega hoje</li>
-                <li><span class="material-symbols-outlined">payments</span> Pendência financeira</li>
-            </ul>
-        </header>
-        <section class="disciplinas">
-            <div class="card">
-                <h3>Disciplina</h3>
-                <p>Sala e Horário</p>
-            </div>
-            <div class="card">
-                <h3>Disciplina</h3>
-                <p>Sala e Horário</p>
-            </div>
-            <div class="card">
-                <h3>Disciplina</h3>
-                <p>Sala e Horário</p>
-            </div>
-        </section>
-        <section class="noticias">
-            <div class="card">
-                <h2>Card de Notícias</h2>
-                <p>Subtítulo</p>
-            </div>
-        </section>
-        <section class="mensagens">
-            <h2>Mensagens</h2>
-            <ul>
-                <li>- aulas</li>
-                <li>- main</li>
-            </ul>
-        </section>
-    </div>
-    <script src="script.js"></script>
-    <a href="/S05">Voltar para a lista de exercícios</a>
-</body>
-</html>
+                <h1>Olá Raphael</h1>
+                <ul class="alertas">
+                    <li><span class="material-symbols-outlined">inventory_2</span> Você possui um armário reservado com entrega para hoje...</li>
+                    <li><span class="material-symbols-outlined">payments</span> Você possui uma pendência no financeiro...</li>
+                </ul>
+            </header>
+            <section class="disciplinas">
+                <div class="card">
+                    <h3>Disciplina</h3>
+                    <p>Sala e Horário</p>
+                </div>
+                <div class="card">
+                    <h3>Disciplina</h3>
+                    <p>Sala e Horário</p>
+                </div>
+                <div class="card">
+                    <h3>Disciplina</h3>
+                    <p>Sala e Horário</p>
+                </div>
+            </section>
+            <section class="noticias">
+                <div class="card">
+                    <h2>Card de Notícias</h2>
+                    <p>Subtítulo</p>
+                </div>
+            </section>
+            <a href="/S05">Voltar para a lista de exercícios</a>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>

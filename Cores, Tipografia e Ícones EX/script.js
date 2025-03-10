@@ -10,7 +10,7 @@ function changeTheme(theme) {
     toggleThemeMenu();
 }
 
-// Carregar tema ao iniciar
+// Carregar tema salvo
 window.onload = () => {
     const savedTheme = localStorage.getItem('inatelTheme') || 'inatel';
     document.body.setAttribute('data-theme', savedTheme);
