@@ -1,0 +1,157 @@
+/* style.css */
+:root {
+    --inatel-primary: #004A8D;
+    --inatel-secondary: #FFD100;
+    --inatel-accent: #E6007E;
+    --dark-bg: #1A1A1A;
+    --dark-card: #2D2D2D;
+    --dark-text: #FFFFFF;
+    --background: #FFFFFF;
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 16px;
+}
+
+.container {
+    display: grid;
+    gap: 16px;
+    max-width: 414px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Correção do Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.theme-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.theme-menu button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* Correção do Carrossel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    margin: 16px 0;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.carousel .card {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carousel img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info {
+    padding: 15px;
+}
+
+/* Correção dos Temas */
+body[data-theme="dark"] {
+    --background: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --card-bg: var(--dark-card);
+}
+
+body[data-theme="inatel"] {
+    --background: #f0f4f8;
+    --card-bg: #ffffff;
+}
+
+/* Mantendo outros estilos */
+.header {
+    background-color: var(--card-bg);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.disciplinas {
+    display: grid;
+    gap: 16px;
+}
+
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 16px;
+    fill: var(--inatel-primary);
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+    
+    .header {
+        grid-column: 1 / -1;
+    }
+    
+    .disciplinas {
+        grid-column: 1 / 2;
+    }
+    
+    .noticias {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
