@@ -1,0 +1,268 @@
+/* style.css */
+:root {
+    --inatel-primary: #004A8D;
+    --inatel-secondary: #FFD100;
+    --inatel-accent: #E6007E;
+    --dark-bg: #1A1A1A;
+    --dark-card: #2D2D2D;
+    --dark-text: #FFFFFF;
+    --background: #FFFFFF;
+    --text-color: #333333;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+    transition: all 0.2s ease;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 414px;
+    margin: 0 auto;
+    padding: 0 16px; /* Padding interno para que o conteúdo não encoste nas bordas */
+    position: relative;
+    gap: 16px;
+    display: grid;
+}
+
+/* Correção do Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.theme-btn {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.theme-btn span {
+    font-size: 20px;
+    color: var(--inatel-primary);
+    transition: color 0.3s ease;
+}
+
+.theme-btn:hover span {
+    color: var(--dark-bg);
+}
+
+.theme-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.8rem;
+    width: 150px;
+    z-index: 1001;
+}
+
+.theme-menu button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.theme-menu button:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.theme-menu button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* Correção do Carrossel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    margin: 16px 0;
+    width: 100%;
+}
+
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel .card {
+    min-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+    text-align: left;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.carousel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel img {
+    width: 100%;
+    height: 200px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info p,
+.info h3 {
+    overflow-wrap: break-word;  /* Garante que palavras longas sejam quebradas */
+    word-break: break-word;
+}
+
+/* Correção dos Temas */
+body[data-theme="dark"] {
+    --background: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --card-bg: var(--dark-card);
+}
+
+body[data-theme="inatel"] {
+    --background: #f0f4f8;
+    --card-bg: #ffffff;
+}
+
+/* Mantendo outros estilos */
+.header {
+    background-color: var(--card-bg);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.disciplinas {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+}
+
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 16px;
+    fill: var(--inatel-primary);
+}
+
+.alertas {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.alertas li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start; /* Alinha no topo para textos longos */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.alertas li .material-symbols-outlined {
+    flex-shrink: 0; /* Impede que o ícone encolha */
+    margin-top: 2px; /* Alinha melhor com o texto */
+}
+
+/* Posicionamento dos botões */
+#prevBtn {
+    left: 10px;
+    top: 160px;
+    background-color: var(--inatel-primary);
+}
+
+#nextBtn {
+    right: 10px;
+    top: 160px;
+    background-color: var(--inatel-primary);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+    
+    .header {
+        grid-column: 1 / -1;
+    }
+    
+    .disciplinas {
+        grid-column: 1 / 2;
+    }
+    
+    .noticias {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+}
