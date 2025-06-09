@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inatel Vagas - Estágios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vagas de Estágio</h1>
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Pesquisar vagas...">
+                <button id="filterButton">Filtros</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="featuredVagas" class="vaga-section">
+                <h2>Vagas em Destaque</h2>
+                <div id="featuredVagasList" class="vaga-list">
+                    <!-- Vagas destacadas serão carregadas aqui -->
+                </div>
+            </section>
+
+            <section id="normalVagas" class="vaga-section">
+                <h2>Todas as Vagas</h2>
+                <div id="normalVagasList" class="vaga-list">
+                    <!-- Vagas normais serão carregadas aqui -->
+                </div>
+            </section>
+        </main>
+
+        <div id="vagaDetailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="detailTitle"></h2>
+                <p id="detailCompany"></p>
+                <p id="detailLocation"></p>
+                <p id="detailSalary"></p>
+                <h3>Descrição da Vaga</h3>
+                <p id="detailDescription"></p>
+                <h3>Requisitos</h3>
+                <ul id="detailRequirements"></ul>
+                <h3>Benefícios</h3>
+                <div id="detailBenefits" class="benefits-list"></div>
+                <button id="applyButton" class="button-primary">Candidatar-se</button>
+                <button id="favoriteButton" class="button-secondary">Adicionar aos Favoritos</button>
+            </div>
+        </div>
+
+        <div id="filterModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Filtros</h2>
+                <div class="filter-group">
+                    <label for="areaFilter">Área de Estudo</label>
+                    <select id="areaFilter">
+                        <option value="">Todas as áreas</option>
+                        <option value="engenharia">Engenharia</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="administracao">Administração</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="locationFilter">Localização</label>
+                    <input type="text" id="locationFilter" placeholder="Digite a cidade...">
+                </div>
+                <div class="filter-group">
+                    <label>Tipo de Estágio</label>
+                    <div>
+                        <input type="checkbox" id="remuneradoFilter" checked>
+                        <label for="remuneradoFilter">Remunerado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="naoRemuneradoFilter" checked>
+                        <label for="naoRemuneradoFilter">Não Remunerado</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <input type="checkbox" id="featuredOnlyFilter">
+                    <label for="featuredOnlyFilter">Apenas vagas destacadas</label>
+                </div>
+                <button id="applyFiltersButton" class="button-primary">Aplicar Filtros</button>
+                <button id="clearFiltersButton" class="button-secondary">Limpar Filtros</button>
+            </div>
+        </div>
+        <a href="/S05">Voltar para a lista de exercícios</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
